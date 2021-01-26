@@ -100,3 +100,7 @@ output:
 -   Something special happens when you publish a parameterized R Markdown on RStudio Connect. Let's publish `portfolio-report.rmd` to Connect. View this content at <https://colorado.rstudio.com/rsc/parameterized-sortino-report/> and see the left hand side input tray for specifying parameters.
 
 -   Another favorite example is customizing the level of detail in a report based on the audience. See <https://rstudio.com/resources/rstudioconf-2019/the-lazy-and-easily-distracted-report-writer-using-rmarkdown-and-parameterised-reports/>
+
+#### Resources
+* The authority: <https://bookdown.org/yihui/rmarkdown/parameterized-reports.html>
+* Another intro: <https://rmarkdown.rstudio.com/developer_parameterized_reports.html%23parameter_types%2F>
