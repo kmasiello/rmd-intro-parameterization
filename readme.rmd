@@ -1,0 +1,104 @@
+---
+title: "Overview"
+author: "Katie Masiello"
+date: "1/25/2021"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Let's have some fun with R Markdown!
+
+### What's inside:
+
+#### `01_hello_world` folder
+
+-   `01_hello_world` contains the "Hello, World!" R Markdown template that you can find when you go to File \> New File \> R Markdown... This is saved as `hello_world.rmd`.
+
+    -   Knit this and see what you get.
+
+        -   Now explore options in modifying the `YAML`. We can change the look of the output easily by adding a theme to the `YAML` output section:
+
+    <!-- -->
+
+            output: 
+              html_document: 
+                theme: united
+
+    -   And we can add a floating Table of Contents for easier navigation with:
+
+    <!-- -->
+
+            output: 
+              html_document: 
+                theme: united
+                toc: true
+                toc_float: true
+
+-   This fancier "Hello, World!" example is saved as `hello_world_fancy.rmd`.
+
+#### `02_publish_it` folder.
+
+-   `02_publish_it` folder contains `stock-report.rmd`, a report that shows the closing price of Tesla stock from the previous day. This report is no fun unless it can be shared with others. `r emo::ji("disappointed")`
+
+-   Using push-button publishing to RStudio Connect, it has been deployed to <https://colorado.rstudio.com/rsc/content/8515>. Go check it out!
+
+-   Furthermore, this report also has a custom email that can be sent using Connect's scheduling functionality to summarize the data and attach a csv of the raw data. The email is saved as `stock-report_email.rmd`
+
+#### `03_make_life_easier` folder.
+
+-   State your preferences once globally and avoid repeating yourself for each chunk option. See `global-setup-chunk.rmd` for suggested global chunk options.
+
+-   New in RStudio v 1.4, the *Visual Editor* makes composing your document easier. Use keyboard shortcuts to format text, insert tables and figures, and more. Test this out with the `palmerpenguins.rmd` file
+
+#### `04_parameterized_reports` folder
+
+-   Do you ever feel repetitive in your reports? Use parameters to re-render the same report based on selected parameters. Parameters give you *interactivity* with your report. Examples of parameters:
+
+    -   Date range
+
+    -   Region / location
+
+    -   Audience / Person
+
+    -   Variable(s) of interest
+
+    -   Level of detail desired in report
+
+    -   Data set
+
+-   see `parameters.rmd` for a basic parameterized report.
+
+-   In `parameters-more.rmd` let's explore different parameter input types.
+
+    **Possible input types and the associated Shiny functions for parameterized reports:**
+
+    +------------------+--------------------+
+    | **Input Type**   | **Shiny Function** |
+    +==================+====================+
+    | checkbox         | checkboxInput      |
+    +------------------+--------------------+
+    | numeric          | numericInput       |
+    +------------------+--------------------+
+    | slider           | sliderInput        |
+    +------------------+--------------------+
+    | date             | dateInput          |
+    +------------------+--------------------+
+    | text             | textInput          |
+    +------------------+--------------------+
+    | file             | fileInput          |
+    +------------------+--------------------+
+    | radio            | radioButtons       |
+    +------------------+--------------------+
+    | select           | selectInput        |
+    +------------------+--------------------+
+    | password         | passwordInput      |
+    +------------------+--------------------+
+
+-   Something special happens when you publish a parameterized R Markdown on RStudio Connect. Let's publish `portfolio-report.rmd` to Connect. View this content at <https://colorado.rstudio.com/rsc/parameterized-sortino-report/> and see the left hand side input tray for specifying parameters.
+
+-   Another favorite example is customizing the level of detail in a report based on the audience. See <https://rstudio.com/resources/rstudioconf-2019/the-lazy-and-easily-distracted-report-writer-using-rmarkdown-and-parameterised-reports/>

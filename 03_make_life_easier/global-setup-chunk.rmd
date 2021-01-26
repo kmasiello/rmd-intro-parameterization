@@ -1,0 +1,17 @@
+---
+title: "Use a Global Setup Chunk"
+author: "Katie Masiello"
+date: "1/25/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE)
+```
+
+Use a setup chunk to control the behavior of your chunks on a global level.
+
+Adjust individual chunks as necessary. 

@@ -1,0 +1,37 @@
+---
+title: "Visualizing the ocean floor"
+output: html_document
+params:
+  data:
+    label: "data:"
+    value: hawaii
+    input: select
+    choices: [aleutians, celt, hawaii, florida]
+  greeting:
+    label: "greeting:"
+    value: Hello
+    input: radio
+    choices: [Hello, Aloha, Hiya, Hey there]
+  daterange:
+    label: "date:"
+    value: "2021-01-01"
+    input: date
+    format: "yyyy-mm-dd"
+    startview: "month"
+---
+
+```{r include = FALSE}
+library(marmap)
+library(ggplot2)
+```
+
+# `r params$greeting`
+
+The [marmap](https://cran.r-project.org/web/packages/marmap/index.html) package provides tools and data for visualizing the ocean floor. Here is an example contour plot of marmap's ``r params$data`` dataset.
+
+```{r echo = FALSE}
+data(list = params$data)
+autoplot(get(params$data))
+```
+
+The date of interest is `r params$date`.

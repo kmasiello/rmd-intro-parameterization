@@ -1,0 +1,12 @@
+name: stock-report
+title: stock-report
+username: katie
+account: katie
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 8515
+bundleId: 43207
+url: https://colorado.rstudio.com/rsc/content/8515/
+when: 1611614656.64097
+asMultiple: TRUE
+asStatic: FALSE
